@@ -10,6 +10,11 @@ Route::get('/', function () {
     return view('Home');
 });
 
+Route::get('/debug-css', function () {
+    $files = scandir(public_path('css'));
+    return response()->json($files);
+});
+
 
 Route::post('/register', [UserController::class, 'register']);
 Route::post('/login', [UserController::class, 'login'])->name('login');
