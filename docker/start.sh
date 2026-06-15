@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Create SQLite database if it doesn't exist
+# Create SQLite database
 mkdir -p /var/data
 touch /var/data/database.sqlite
 
@@ -11,6 +11,5 @@ php artisan view:cache
 php artisan migrate --force
 php artisan storage:link
 
-# Start PHP-FPM and Nginx
-php-fpm -D
-nginx -g "daemon off;"
+# Start Apache
+apache2-foreground
