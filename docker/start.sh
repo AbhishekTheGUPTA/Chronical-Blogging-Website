@@ -7,6 +7,7 @@ chmod 664 /var/data/database.sqlite
 
 # Laravel setup
 php artisan config:clear
+php artisan cache:clear
 php artisan migrate --force --no-interaction
 php artisan storage:link || true
 
