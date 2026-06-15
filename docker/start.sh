@@ -3,7 +3,8 @@
 # Create SQLite database
 mkdir -p /var/data
 touch /var/data/database.sqlite
-chmod 664 /var/data/database.sqlite
+chmod 777 /var/data/database.sqlite
+chown www-data:www-data /var/data/database.sqlite
 
 # Laravel setup
 php artisan config:clear

@@ -49,4 +49,5 @@ EXPOSE 10000
 # Start script
 COPY docker/start.sh /start.sh
 RUN chmod +x /start.sh
+RUN mkdir -p /var/data && chmod 777 /var/data
 CMD ["/start.sh"]
