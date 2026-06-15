@@ -1,3 +1,8 @@
+@section('content')
+<style>
+    body { background: white !important; color: black !important; }
+    .page-shell { background: white !important; }
+</style>
 @extends('layouts.DashboardLayout')
 @section('content')
 
