@@ -29,7 +29,7 @@ class DashboardController extends Controller
         $pageViews = $days->map(fn ($d) => $viewsRaw[$d] ?? 0);
         $uniqueVisitors = $days->map(fn ($d) => $uniqueRaw[$d] ?? 0);
 
-        return view('dashboard', compact('user', 'labels', 'pageViews', 'uniqueVisitors'));
+        return view('Dashboard', compact('user', 'labels', 'pageViews', 'uniqueVisitors'));
     }
 
     public function traffic(Request $request)

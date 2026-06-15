@@ -38,7 +38,7 @@ class UserController extends Controller
             'password' => $incomingFields['login_password']
         ])){
             $request->session()->regenerate();
-            return redirect('/dashboard');
+            return redirect('/Dashboard');
         }
 
         return back()->withErrors(['login_email' => 'Invalid Credentials'])->onlyInput('login_email');
@@ -59,7 +59,7 @@ class UserController extends Controller
                     ->where('visibility', 'public')
                     ->latest('published_at')
                     ->paginate(100);    
-        return view('explore', compact('posts'));
+        return view('Explore', compact('posts'));
     }
 
     public function Read(Request $request, string $slug){
@@ -96,6 +96,6 @@ class UserController extends Controller
             ]);
         }       
         
-        return view('read', compact('posts'));
+        return view('Read', compact('posts'));
     }
 }

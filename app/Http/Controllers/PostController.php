@@ -26,7 +26,7 @@ class PostController extends Controller
         // Add image after creating post
         
         $message = $action === 'draft' ? 'Post saved as draft!' : 'Post published successfully!';
-        return redirect()->route('dashboard')->with('success', $message);
+        return redirect()->route('Dashboard')->with('success', $message);
     }
 
     public function browse(){
