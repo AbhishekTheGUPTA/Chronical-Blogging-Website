@@ -507,8 +507,8 @@
 
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('css/create.css') }}">
     <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/create.css') }}">    
 @endpush
 
 
