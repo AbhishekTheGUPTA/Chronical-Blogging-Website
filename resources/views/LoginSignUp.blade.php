@@ -110,7 +110,8 @@
                                     <div class="flip-card__inner">
                                         <div class="flip-card__front">
                                             <div class="title">Log in</div>
-                                            <form class="flip-card__form">
+                                            <form class="flip-card__form" method="POST" action="{{ route('login') }}">
+                                                @csrf
                                                 <input class="flip-card__input" name="login_email" placeholder="Email"
                                                     type="email">
                                                 <input class="flip-card__input" name="login_password" placeholder="Password"
@@ -120,7 +121,8 @@
                                         </div>
                                         <div class="flip-card__back">
                                             <div class="title">Sign up</div>
-                                            <form class="flip-card__form">
+                                            <form class="flip-card__form" method="POST" action="{{ route('register') }}">
+                                                @csrf
                                                 <input class="flip-card__input" placeholder="Name" name="name" type="text">
                                                 <input class="flip-card__input" name="email" placeholder="Email"
                                                     type="email">
