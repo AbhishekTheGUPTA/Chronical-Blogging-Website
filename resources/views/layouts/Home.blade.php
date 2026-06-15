@@ -37,7 +37,6 @@
     <title>@yield('title', 'Chronicle | Modern Blog')</title>
     @stack('styles')
 </head>
-
 <body class="loading">
     <div id="pageLoader" aria-label="Loading Chronicle">
         <div class="loader-core">
