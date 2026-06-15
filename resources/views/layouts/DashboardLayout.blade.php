@@ -139,7 +139,19 @@
         </div>
     </div>
 
-    
+
+    <script>
+        // Dismiss the page loader once DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            const loader = document.getElementById('pageLoader');
+            loader?.classList.add('active');          // animate the core in
+            setTimeout(() => {
+                loader?.classList.add('hidden');        // fade it out
+                document.body.classList.remove('loading'); // restore scroll
+            }, 900);
+        });
+    </script>
+
     @stack('scripts')
 </body>
 

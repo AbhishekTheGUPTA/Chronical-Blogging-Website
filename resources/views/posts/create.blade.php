@@ -1,11 +1,14 @@
+
+@extends('layouts.DashboardLayout')
+@push('styles')
+    <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/create.css') }}">    
+@endpush
 @section('content')
 <style>
     body { background: white !important; color: black !important; }
     .page-shell { background: white !important; }
 </style>
-@extends('layouts.DashboardLayout')
-@section('content')
-
 
     <div class="container page-shell">
         <div class="intro-bar d-flex flex-wrap justify-content-between align-items-start gap-3">
@@ -511,10 +514,7 @@
 @endsection
 
 
-@push('styles')
-    <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/create.css') }}">    
-@endpush
+
 
 
 @push('scripts')
